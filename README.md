@@ -32,7 +32,7 @@ This is a template repo for new dbt packages within Snowplow. To use this templa
         - [ ] Allow auto-merge
         - [ ] Automatically delete head branches
 8. Add branch protection on `main` and `release/**/*` with the following settings: 
-    - [x] Require a pull request before merging
+    - [x] Require a pull request before merging ***(unticked for release branch)***
         - [x] Require approvals
     - [x] Require status checks to pass before merging *(pick specific status checks once they are added)*
         - [x] Require branches to be up to date before merging
