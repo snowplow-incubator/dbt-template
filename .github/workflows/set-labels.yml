@@ -1,6 +1,7 @@
 name: set-labels
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - 'main'
