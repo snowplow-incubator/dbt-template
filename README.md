@@ -11,6 +11,7 @@ This is a template repo for new dbt packages within Snowplow. To use this templa
 
 1. Update this `README.md` with relevant information, deleting these instructions and replacing all <YOUR REPO HERE> text including in badge links
 2. Update the `.github/workflows/release.yml` with your package name
+3. Update the `.github/workflows/publish-gh-pages.yml` to have it run on main, selecting the appropriate warehouse for you
 3. Update the `CHANGELOG` with your package name
 4. Name your package in the `dbt_project.yml`
 5. Commit these changes
@@ -56,7 +57,7 @@ If you find a bug, please report an issue on GitHub.
 
 # Copyright and license
 
-The <YOUR PACKAGE HERE> package is Copyright 2022 Snowplow Analytics Ltd.
+The <YOUR PACKAGE HERE> package is Copyright 2023 Snowplow Analytics Ltd.
 
 Licensed under the [Apache License, Version 2.0][license] (the "License");
 you may not use this software except in compliance with the License.
