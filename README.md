@@ -1,6 +1,6 @@
-[![early-release]][tracker-classification] 
+[![early-release]][tracker-classification]
 [![Release][release-image]][releases]
-[![License][license-image]][license] 
+[![License][license-image]][license]
 [![Discourse posts][discourse-image]][discourse]
 
 ![snowplow-logo](https://raw.githubusercontent.com/snowplow/dbt-snowplow-utils/main/assets/snowplow_logo.png)
@@ -12,11 +12,12 @@ This is a template repo for new dbt packages within Snowplow. To use this templa
 1. Update this `README.md` with relevant information, deleting these instructions and replacing all <YOUR REPO HERE> text including in badge links
 2. Update the `.github/workflows/release.yml` with your package name
 3. Update the `.github/workflows/publish-gh-pages.yml` to have it run on main, selecting the appropriate warehouse for you
-3. Update the `CHANGELOG` with your package name
-4. Name your package in the `dbt_project.yml`
-5. Commit these changes
-6. Add the relevant users/teams to your repo
-7. Update the repo settings to the following:
+4. Update the `.github/pull_request_template.md` with your package name
+5. Update the `CHANGELOG` with your package name
+6. Name your package in the `dbt_project.yml`
+7. Commit these changes
+8. Add the relevant users/teams to your repo
+9. Update the repo settings to the following:
    1. Features:
        - [ ] Wikis
        - [x] Issues
@@ -25,14 +26,14 @@ This is a template repo for new dbt packages within Snowplow. To use this templa
        - [x] Preserve this repository
        - [ ] Discussions
        - [ ] Projects
-    1. Pull Requests:
+    2. Pull Requests:
         - [ ] Allow merge commits
         - [x] Allow squash merging (Default to pull request title)
         - [x] Allow rebase merging
         - [ ] Always suggest updating pull request branches
         - [ ] Allow auto-merge
         - [ ] Automatically delete head branches
-8. Add branch protection on `main` and `release/**/*` with the following settings: 
+10. Add branch protection on `main` and `release/**/*` with the following settings:
     - [x] Require a pull request before merging ***(unticked for release branch)***
         - [x] Require approvals
     - [x] Require status checks to pass before merging *(pick specific status checks once they are added)*
@@ -57,19 +58,12 @@ If you find a bug, please report an issue on GitHub.
 
 # Copyright and license
 
-The <YOUR PACKAGE HERE> package is Copyright 2023 Snowplow Analytics Ltd.
+The <YOUR PACKAGE HERE> package is Copyright 2023-present Snowplow Analytics Ltd.
 
-Licensed under the [Apache License, Version 2.0][license] (the "License");
-you may not use this software except in compliance with the License.
+This distribution is all licensed under the [Snowplow Personal and Academic License][license] . (If you are uncertain how it applies to your use case, check our answers to [frequently asked questions](https://docs.snowplow.io/docs/contributing/community-license-faq/).)
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-
-[license]: http://www.apache.org/licenses/LICENSE-2.0
-[license-image]: http://img.shields.io/badge/license-Apache--2-blue.svg?style=flat
+[license]: https://docs.snowplow.io/personal-and-academic-license-1.0/
+[license-image]: http://img.shields.io/badge/license-Snowplow--Personal--and--Academic--1-blue.svg?style=flat
 
 [website]: https://snowplow.io/
 [snowplow]: https://github.com/snowplow/snowplow
