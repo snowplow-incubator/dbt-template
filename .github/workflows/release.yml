@@ -8,12 +8,13 @@ name: Release
 #####
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
+  # push:
+  #   branches:
+  #     - main
 
 env:
-  package_name: Snowplow <PACKAGE NAME>
+  package_name: <YOUR PACKAGE NAME>
 
 jobs:
   version_check:
@@ -25,7 +26,7 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
           fetch-depth: 0 # needed to get tags
 
@@ -63,7 +64,7 @@ jobs:
     steps:
 
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Setup git
       uses: oleksiyrudenko/gha-git-credentials@v2.1.1
@@ -96,7 +97,7 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Prep release body
       id: release_prep

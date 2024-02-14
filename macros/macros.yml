@@ -1,0 +1,5 @@
+version: 2
+
+macros:
+  - name: allow_refresh
+    description: '{{ doc("macro_allow_refresh") }}'
