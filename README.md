@@ -5,19 +5,26 @@
 
 ![snowplow-logo](https://raw.githubusercontent.com/snowplow/dbt-snowplow-utils/main/assets/snowplow_logo.png)
 
-# <YOUR REPO HERE>
+# <YOUR PACKAGE NAME>
 
 This is a template repo for new dbt packages within Snowplow. To use this template, follow the instructions for [Creating a repository from a template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) then follow these steps:
 
-1. Update this `README.md` with relevant information, deleting these instructions and replacing all <YOUR REPO HERE> text including in badge links
+1. Update this `README.md` with relevant information, deleting these instructions and replacing all <YOUR PACKAGE NAME> text including in badge links
 2. Update the `.github/workflows/release.yml` with your package name
 3. Update the `.github/workflows/publish-gh-pages.yml` to have it run on main, selecting the appropriate warehouse for you
 4. Update the `.github/pull_request_template.md` with your package name
 5. Update the `CHANGELOG` with your package name
-6. Name your package in the `dbt_project.yml`
-7. Commit these changes
-8. Add the relevant users/teams to your repo
-9. Update the repo settings to the following:
+6. Update the `CONTRIBUTING.md` with your package name
+7. Name your package in the `dbt_project.yml`
+8. Included in this template are the base models that should be used across all Snowplow packages. These models take advantage of the incremental framework built in the Utils base macros so you won't have to do the initial heavy lifting yourself. You will need to update the following:
+    1. Update all model file names, replacing all <YOUR PACKAGE NAME>
+    2. Update all reference inside the models, replacing <YOUR PACKAGE NAME> text
+    3. Update any of the base macro variables in the `dbt_project.yml` if needed
+9. Update all ./docs/markdown file names and replace references of <YOUR PACKAGE NAME> text
+10. Update the template Integration test suite found in ./integration_tests replacing all <YOUR PACKAGE NAME>
+11. Commit these changes
+12. Add the relevant users/teams to your repo
+13. Update the repo settings to the following:
    1. Features:
        - [ ] Wikis
        - [x] Issues
@@ -33,7 +40,7 @@ This is a template repo for new dbt packages within Snowplow. To use this templa
         - [ ] Always suggest updating pull request branches
         - [ ] Allow auto-merge
         - [ ] Automatically delete head branches
-10. Add branch protection on `main` and `release/**/*` with the following settings:
+14. Add branch protection on `main` and `release/**/*` with the following settings:
     - [x] Require a pull request before merging ***(unticked for release branch)***
         - [x] Require approvals
     - [x] Require status checks to pass before merging *(pick specific status checks once they are added)*
@@ -47,6 +54,7 @@ This is a template repo for new dbt packages within Snowplow. To use this templa
     - [ ] Restrict who can push to matching branches
     - [ ] Allow force pushes ***(ticked  for release branch)***
     - [ ] Allow deletions ***(ticked for release branch)***
+15. Add the relevant warehouse connection secrets required for in the ./integration_tests
 
 # Join the Snowplow community
 
@@ -58,7 +66,7 @@ If you find a bug, please report an issue on GitHub.
 
 # Copyright and license
 
-The <YOUR PACKAGE HERE> package is Copyright 2023-present Snowplow Analytics Ltd.
+The <YOUR PACKAGE NAME> package is Copyright 2023-present Snowplow Analytics Ltd.
 
 This distribution is all licensed under the [Snowplow Personal and Academic License][license] . (If you are uncertain how it applies to your use case, check our answers to [frequently asked questions](https://docs.snowplow.io/docs/contributing/community-license-faq/).)
 
