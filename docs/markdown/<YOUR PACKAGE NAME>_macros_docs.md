@@ -7,3 +7,15 @@ This macro is used to determine if a full-refresh is allowed (depending on the e
 
 {% endraw %}
 {% enddocs %}
+
+{% docs macro_get_cluster_by_values %}
+{% raw %}
+
+A macro to manage the cluster by fields for various models in the package.
+
+#### Returns
+
+The field to cluster by based on model name and target type.
+
+{% endraw %}
+{% enddocs %}

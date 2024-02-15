@@ -16,7 +16,7 @@ You may obtain a copy of the Snowplow Personal and Academic License Version 1.0 
       "field": "start_tstamp",
       "data_type": "timestamp"
     }, databricks_val='start_tstamp_date'),
-    cluster_by=snowplow_utils.get_value_by_target_type(bigquery_val=["session_identifier"], snowflake_val=["to_date(start_tstamp)"]),
+    cluster_by=<YOUR PACKAGE NAME>.get_cluster_by_values('lifecycle_manifest'),
     full_refresh=<YOUR PACKAGE NAME>.allow_refresh(),
     tags=["manifest"],
     sql_header=snowplow_utils.set_query_tag(var('snowplow__query_tag', 'snowplow_dbt')),
