@@ -43,7 +43,8 @@ You may obtain a copy of the Snowplow Personal and Academic License Version 1.0 
     snowplow_events_schema=var('snowplow__atomic_schema', 'atomic'),
     snowplow_events_table=var('snowplow__events_table', 'events'),
     event_limits_table='<YOUR PACKAGE NAME>_base_new_event_limits',
-    incremental_manifest_table='<YOUR PACKAGE NAME>_incremental_manifest'
+    incremental_manifest_table='<YOUR PACKAGE NAME>_incremental_manifest',
+    package_name='<YOUR PACKAGE NAME>'
 ) %}
 
 {{ sessions_lifecycle_manifest_query }}
